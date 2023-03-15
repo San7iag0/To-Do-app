@@ -22,8 +22,8 @@ const items = (state = initialState, action) => {
             }
 
         case actionTypes.EDIT_ITEM:
-            var newList = [...state.items];
-            var index = newList.indexOf(state.item);
+            let newList = [...state.items];
+            let index = newList.indexOf(state.item);
             if (index !== -1) {
                 newList[index].value = state.title;
                 return {
