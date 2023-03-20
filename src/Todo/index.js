@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Form from './Form';
 import TodoList from './TodoList';
-import Header from './header';
+import Header from './Header';
 
 const useStyles = makeStyles({
     root: {

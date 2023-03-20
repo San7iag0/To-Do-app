@@ -13,12 +13,17 @@ const useStyles = makeStyles({
         margin: "auto"
     }
 });
+
 const Header = () => {
     const classes = useStyles();
     return (
         <AppBar position="static">
             <Toolbar className={classes.toolbar}>
-                <Typography className={classes.heading} variant="h5" align="center">Todo App</Typography>
+                <Typography 
+                    className={classes.heading} 
+                    variant="h5" 
+                    align="center"
+                >Todo App</Typography>
             </Toolbar>
         </AppBar>
     )

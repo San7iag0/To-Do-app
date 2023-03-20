@@ -39,6 +39,11 @@ export const setEditTitle = () => {
         types: actionTypes.SET_EDIT
     }
 }
+export const setEdit = () => {
+    return {
+        types: actionTypes.SET_EDIT
+    }
+}
 
 export const setError = (error) => {
     return {
