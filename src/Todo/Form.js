@@ -22,6 +22,7 @@ const useStyles = makeStyles({
 const Form = ({ title, setTitle, addItem, editItem, edit, error, setError }) => {
     const classes = useStyles();
     const handleChange = (event) => {
+        console.log(event);
         const title = event.target.value;
         
         setTitle(title);
@@ -47,11 +48,29 @@ const Form = ({ title, setTitle, addItem, editItem, edit, error, setError }) => 
         <Container maxWidth="sm" className={classes.root}>
             <Grid container alignItems="center">
                 <Grid item md={12}>
-                    <TextField value={title} onChange={handleChange} 
-                    error={!!error} helperText={error} id="outlined-basic" fullWidth label="Enter Title" multiline variant="outlined" />
+                    <input
+                        onChange={handleChange}
+                        type='text'
+                    />
+                    <TextField                         
+                        type="text" 
+                        value={title} 
+                        onChange={handleChange} 
+                        error={!!error} 
+                        helperText={error} 
+                        id="outlined-basic" 
+                        fullWidth 
+                        label="Enter Title" 
+                        multiline variant="outlined" 
+                    />
                 </Grid>
                 <Grid item md={12}>
-                    <Button className={classes.button} variant="contained" color="primary" onClick={handleClick}>
+                    <Button 
+                        className={classes.button} 
+                        variant="contained" 
+                        color="primary" 
+                        onClick={handleClick}
+                    >
                         {edit ? "Edit" : "Add"}
                     </Button>
                 </Grid>
@@ -73,7 +92,6 @@ const mapDispatchToProps = dispatch => {
         setError: (error) => dispatch(actionTypes.setError(error)),
         addItem: () => dispatch(actionTypes.addItem()),
         editItem: () => dispatch(actionTypes.editItem()),
-
     }
 }
 
